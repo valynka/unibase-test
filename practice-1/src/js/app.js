@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (error === 0) {
       console.log(formData);
       alert('Форма успешно отпрвлена');
-      logoWrap.style.backgroundImage = `url("../img/avatar.png")`;
+      logoWrap.style.backgroundImage = func.isWebp() ? `url("../img/avatar.webp")` : `url("../img/avatar.png")`;
       form.reset();
     } else {
       alert("Заполните обязательные поля");
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   logoCancel.addEventListener("click", () => {
     logoInput.value = "";
-    logoWrap.style.backgroundImage = `url("../img/avatar.png")`;
+    logoWrap.style.backgroundImage = funcs.isWebp() ? `url("../img/avatar.webp")` : `url("../img/avatar.png")`;
   })
 
   logoInput.addEventListener("change", () => {
