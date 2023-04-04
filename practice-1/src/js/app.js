@@ -13,12 +13,15 @@ document.addEventListener("DOMContentLoaded", function () {
     let error = formValidate(form);
 
     let formData = new FormData(form);
-    formData.append('image', logoInput.files[0]);
+    formData.append("image", logoInput.files[0]);
 
     if (error === 0) {
       console.log(formData);
-      alert('Форма успешно отпрвлена');
-      logoWrap.style.backgroundImage = func.isWebp() ? `url("../img/avatar.webp")` : `url("../img/avatar.png")`;
+      alert("Форма успешно отпрвлена");
+      logoWrap.style.backgroundImage =
+        document.documentElement.classList.contains("webp")
+          ? `url("../img/avatar.webp")`
+          : `url("../img/avatar.png")`;
       form.reset();
     } else {
       alert("Заполните обязательные поля");
@@ -75,8 +78,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   logoCancel.addEventListener("click", () => {
     logoInput.value = "";
-    logoWrap.style.backgroundImage = funcs.isWebp() ? `url("../img/avatar.webp")` : `url("../img/avatar.png")`;
-  })
+    logoWrap.style.backgroundImage =
+      document.documentElement.classList.contains("webp")
+        ? `url("../img/avatar.webp")`
+        : `url("../img/avatar.png")`;
+  });
 
   logoInput.addEventListener("change", () => {
     uploadFile(logoInput.files[0]);
@@ -93,25 +99,23 @@ document.addEventListener("DOMContentLoaded", function () {
       logoWrap.style.backgroundImage = `url(${e.target.result})`;
     };
     reader.onerror = function (e) {
-      alert('Ошибка');
-    }
+      alert("Ошибка");
+    };
     reader.readAsDataURL(file);
   }
 
-
-  const popup = document.querySelector('.open-popup');
-  const formClose = document.querySelector('.partner-form__cancel');
+  const popup = document.querySelector(".open-popup");
+  const formClose = document.querySelector(".partner-form__cancel");
 
   popup.addEventListener("click", () => {
-    form.style.display = 'block';
-    popup.style.display = 'none';
-    document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.42)';
+    form.style.display = "block";
+    popup.style.display = "none";
+    document.body.style.backgroundColor = "rgba(0, 0, 0, 0.42)";
   });
 
-  formClose.addEventListener('click', () => {
-    form.style.display = 'none';
-    popup.style.display = 'block';
-    document.body.style.backgroundColor = 'transparent';
-  })
-
+  formClose.addEventListener("click", () => {
+    form.style.display = "none";
+    popup.style.display = "block";
+    document.body.style.backgroundColor = "transparent";
+  });
 });
