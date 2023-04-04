@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Форма успешно отпрвлена");
       logoWrap.style.backgroundImage =
         document.documentElement.classList.contains("webp")
-          ? `url("../img/avatar.webp")`
-          : `url("../img/avatar.png")`;
+          ? `url("./img/avatar.webp")`
+          : `url("./img/avatar.png")`;
       form.reset();
     } else {
       alert("Заполните обязательные поля");
@@ -80,8 +80,8 @@ document.addEventListener("DOMContentLoaded", function () {
     logoInput.value = "";
     logoWrap.style.backgroundImage =
       document.documentElement.classList.contains("webp")
-        ? `url("../img/avatar.webp")`
-        : `url("../img/avatar.png")`;
+        ? `url("./img/avatar.webp")`
+        : `url("./img/avatar.png")`;
   });
 
   logoInput.addEventListener("change", () => {
