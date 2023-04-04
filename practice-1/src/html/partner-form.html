@@ -1,0 +1,109 @@
+<form action="#" id="partner-form" name="partner-form" class="partner-form">
+  <h1 class="partner-form__h1">Стать партнёром проекта</h1>
+  <div class="partner-form__top">
+    <div class="partner-form__main-info">
+      <div class="partner-form__input-wrap">
+        <label
+          class="partner-form__label partner-form__label_required"
+          for="company-name"
+          >Название организации</label
+        >
+        <input
+          type="text"
+          name="company-name"
+          id="company-name"
+          class="partner-form__input partner-form__input_text-bottom _required"
+        />
+      </div>
+      <div class="partner-form__input-wrap">
+        <label
+          class="partner-form__label partner-form__label_required"
+          for="company-name"
+          >Телефон</label
+        >
+        <input type="tel" name="tel" id="tel" class="partner-form__input partner-form__input_text-bottom _required _tel" />
+      </div>
+      <div class="partner-form__input-wrap">
+        <label
+          class="partner-form__label partner-form__label_required"
+          for="company-name"
+          >E-mail</label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="partner-form__input partner-form__input_text-bottom _required _email"
+        />
+      </div>
+    </div>
+    <div class="partner-form__logo">
+      <div class="partner-form__logo-input-wrap">
+        <label
+          class="partner-form__label partner-form__label_required partner-form__label_bold"
+          for="logo"
+          >Логотип (jpeg, png)</label
+        >
+        <input
+          type="file"
+          accept=".jpeg, .jpg, .png"
+          name="logo"
+          id="logo"
+          class="partner-form__input partner-form__input_photo _required _photo"
+        />
+        <img
+          src="../img/icons/file-close.svg"
+          alt="icon-close"
+          class="partner-form__icon-close"
+        />
+        <div class="partner-form__photo">
+          <img
+            src="../img/icons/file-icon.svg"
+            alt="file-icon"
+            class="partner-form__file-icon"
+          />
+          <p class="partner-form__file-text">Выберите файл</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="partner-form__input-wrap">
+    <label
+      class="partner-form__label partner-form__label_required"
+      for="line"
+      >Направление</label
+    >
+    <select id="line" class="partner-form__input partner-form__input_select-img partner-form__input_text-bottom _required">
+      <option value="ecology" selected>Экология</option>
+      <option value="other">Другое</option>
+    </select>
+  </div>
+  <div class="partner-form__input-wrap">
+    <input type="text" class="partner-form__input partner-form__input_site" />
+  </div>
+  <div class="partner-form__input-wrap">
+    <input type="text" class="partner-form__input partner-form__input_vk" />
+  </div>
+  <div class="partner-form__input-wrap">
+    <input type="text" class="partner-form__input partner-form__input_ok" />
+  </div>
+  <div class="partner-form__input-wrap">
+    <input type="text" class="partner-form__input partner-form__input_fb" />
+  </div>
+  <div class="partner-form__input-wrap">
+    <input type="text" class="partner-form__input partner-form__input_insta" />
+  </div>
+  <div class="partner-form__input-wrap">
+    <input type="text" class="partner-form__input partner-form__input_youtube" />
+  </div>
+  <div class="partner-form__input-wrap">
+    <label
+      class="partner-form__label"
+      for="manager"
+      >Руководитель</label
+    >
+    <input type="text" name="manager" id="manager" class="partner-form__input partner-form__input_text-bottom" />
+  </div>
+  <button type="submit" class="partner-form__button">Стать партнёром проекта</button>
+  <div class="partner-form__cancel">Отменить</div>
+</form>
