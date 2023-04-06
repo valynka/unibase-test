@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://use.fontawesome.com/bc7d3bd658.css"
+    media="all"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="module">
+    import SortableTable from "./index.js";
+
+    let url = "https://jsonplaceholder.typicode.com/posts";
+    let response = await fetch(url);
+
+    let data = await response.json();
+
+    const header = [
+      {
+        id: "userId",
+        title: "userId",
+        sortable: true,
+        sortType: "number",
+      },
+      {
+        id: "id",
+        title: "id",
+        sortable: true,
+        sortType: "number",
+      },
+      {
+        id: "title",
+        title: "title",
+        sortable: true,
+        sortType: "string",
+      },
+      {
+        id: "body",
+        title: "body",
+        sortable: true,
+        sortType: "string",
+      },
+    ];
+
+    const sortableTable = new SortableTable(header, { data });
+
+    root.append(sortableTable.element);
+  </script>
+</body>
